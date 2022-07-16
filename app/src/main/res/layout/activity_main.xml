@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="count_local"
+            type="int" />
+
+        <variable
+            name="count_visit"
+            type="int" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C2D1F6"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/puntutation_visit"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
+            android:layout_marginBottom="24dp"
+            android:background="@color/purple_500"
+            android:fontFamily="casual"
+            android:text="@{Integer.toString(count_visit)}"
+            tools:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintBottom_toTopOf="@+id/title_visit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_sum_2_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="96dp"
+            android:fontFamily="casual"
+            android:text="+2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/puntutation_visit" />
+
+        <Button
+            android:id="@+id/button_sum_1_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="casual"
+            android:text="+1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button_sum_2_visit"
+            app:layout_constraintStart_toEndOf="@+id/puntutation_visit" />
+
+        <Button
+            android:id="@+id/button_rest_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="128dp"
+            android:fontFamily="casual"
+            android:text="-1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/puntutation_visit" />
+
+        <TextView
+            android:id="@+id/title_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="casual"
+            android:text="@string/local"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:fontFamily="casual"
+            android:text="@string/visit"
+            android:textColor="@color/black"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_rest_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:fontFamily="casual"
+            android:text="-1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/puntutation_local"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+        <Button
+            android:id="@+id/button_sum_1_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="casual"
+            android:text="+1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/button_sum_2_local"
+            app:layout_constraintStart_toEndOf="@+id/puntutation_local"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.892" />
+
+        <Button
+            android:id="@+id/button_sum_2_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="516dp"
+            android:fontFamily="casual"
+            android:text="+2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/puntutation_local" />
+
+        <TextView
+            android:id="@+id/puntutation_local"
+            android:layout_width="86dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/purple_500"
+            android:fontFamily="casual"
+            android:text="@{Integer.toString(count_local)}"
+            tools:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="70sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_local" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/puntutation_visit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/puntutation_local"
+            tools:srcCompat="@mipmap/ball_foreground" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            app:icon="@android:drawable/ic_menu_rotate"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/button_rest_visit"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_rest_local"
+            app:layout_constraintVertical_bias="0.245" />
+
+        <Button
+            android:id="@+id/show_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:icon="@android:drawable/ic_media_next"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/button_sum_1_visit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/button_sum_2_local" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

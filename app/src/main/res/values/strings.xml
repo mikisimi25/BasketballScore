@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BasketballScore</string>
+    <string name="local">Local</string>
+    <string name="visit">Visitante</string>
+    <string name="tie">Fue un Empate</string>
+    <string name="win_local">¡Ganó el equipo local!</string>
+    <string name="win_visit">¡Ganaron los visitantes!</string>
+    <string name="local_visitante">Local - Visitante</string>
+</resources>
